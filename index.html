@@ -8,9 +8,7 @@
 
 <h1>ログイン画面</h1>
 <?php
-
 $err_msg = "";
-
 if (isset($_POST['login'])) {
   $username = $_POST['username'];
   $password = $_POST['password'];
@@ -22,7 +20,6 @@ if (isset($_POST['login'])) {
     $result = $stmt->fetch();
     $stmt = null;
     $db = null;
-    
     if ($result[0] != 0) {
       header('Location: https://malunyan.github.io/FIJI-WATER/');
       exit;
@@ -34,7 +31,6 @@ if (isset($_POST['login'])) {
     exit;
   }
 }
-
 ?>
 <form action="" method="POST">
   ユーザ名<input type="text" name="username" value=""><br>
