@@ -8,14 +8,14 @@ if (isset($_POST['login'])) {
   try {
     $db = new PDO('mysql:host=localhost:dbname=sample', 'watanabe', 'root');
     $sql = 'select count(*) from users where username=? and password=?';
-    $stmt = $db->prepare($sql);
+    $stmt = $db prepare($sql);
     $stmt->execute(array($username, $password));
     $result = $stmt->fetch();
     $stmt = null;
     $db = null;
     
     if ($result[0] != 0) {
-      header('Location: http://localhost:8080/home.php');
+      header('Location: https://malunyan.github.io/FIJI-WATER/');
       exit;
     } else {
       $err_msg = "ユーザ名またはパスワードが誤りです。";
