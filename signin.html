@@ -5,7 +5,7 @@ if (isset($_POST['signin'])) {
   $password = $_POST['password'];
   echo $username . "<br>";
   echo $password . "<br>";
-}
+  }
   try {
     $db = new PDO('mysql:host=localhost:dbname=sample', 'root', 'nipponbeerdata');
     $sql = 'insert into users(username, password) values(?, ?)';
