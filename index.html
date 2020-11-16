@@ -1,7 +1,5 @@
 <?php
-
 $err_msg = "";
-
 if (isset($_POST['login'])) {
   $username = $_POST['username'];
   $password = $_POST['password'];
@@ -13,7 +11,6 @@ if (isset($_POST['login'])) {
     $result = $stmt->fetch();
     $stmt = null;
     $db = null;
-    
     if ($result[0] != 0) {
       header('Location: http://localhost:8080/home.php');
       exit;
@@ -25,7 +22,6 @@ if (isset($_POST['login'])) {
     exit;
   }
 }
-
 ?>
 
 <!DOCTYPE html>
