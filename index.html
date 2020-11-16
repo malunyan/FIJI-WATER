@@ -13,26 +13,28 @@ $err_msg = "";
 if (isset($_POST['login'])) {
   $username = $_POST['username'];
   $password = $_POST['password'];
+}
   try {
     $db = new PDO('mysql:host=localhost:dbname=sample', 'watanabe', 'root');
     $sql = 'select count(*) from users where username=? and password=?';
-    $stmt = $db prepare $sql;
+    $stmt = $db->prepare($sql);
     $stmt->execute(array($username, $password));
     $result = $stmt->fetch();
     $stmt = null;
     $db = null;
+  }
     if ($result[0] != 0) {
       header('Location: https://malunyan.github.io/FIJI-WATER/');
       exit;
-    } else {
+    } 
+  else {
       $err_msg = "ユーザ名またはパスワードが誤りです。";
     }
-  } catch (PDOException $e) {
+  catch (PDOException $e) {
     echo $e->getMessage();
     exit;
   }
-}
-;?>
+?>
 <form action="" method="POST">
   ユーザ名<input type="text" name="username" value=""><br>
   パスワード<input type="password" name="password" value=""><br>
