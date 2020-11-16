@@ -5,19 +5,22 @@ if (isset($_POST['signin'])) {
   $password = $_POST['password'];
   echo $username . "<br>";
   echo $password . "<br>";
-  try{
-  $db =new PDO('mysql:host=localhost;dbname=sample','root','nipponbeerdata');
-  $sql ='insert into users(username,password) values(?,?)';
-  $stmt = $db->prepare($sql);
-  $stmt->execute(array($username, $password));
-  $stmt = null;
-  $db = null;
-  }catch  (PDOException $e) {
-    echo $e->getMessage():
+ try {
+    $db = new PDO('mysql:host=localhost:dbname=sample', 'root', 'nipponbeerdata');
+    $sql = 'insert into users(username, password) values(?, ?)';
+    $stmt = $db->prepare($sql);
+    $stmt->execute(array($username, $password));
+    $stmt = null;
+    $db = null;
+    
+    header('Location: file:///C:/PHP/fiji_water/index.php');
+    exit;
+  } catch (PDOException $e) {
+    echo $e->getMessage();
     exit;
   }
 }
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
