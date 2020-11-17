@@ -55,8 +55,19 @@
 						  </div>
 						  
 						  <div class="form-group">
-						    <label for="name1" class="b">定休日と営業時間  <span class="pr_flash_con">必須</span></label>
-						    <textarea name="eigyo_time" class="form-control size-input-name"></textarea>
+						    <label for="name1" class="b">定休日  <span class="pr_flash_con">必須</span></label>
+						    <select class="form-control size-input-name" id="runtime" name="runtime">
+						  </div>
+						  
+						  <div class="form-group">
+						    <label for="name1" class="b">営業時間  <span class="pr_flash_con">必須</span></label>
+						    <form><label for="appt-time">営業開始時刻: </label>
+						    <input id="appt-time" type="time" name="appt-time"></form>
+						  </div>
+						  <div class="form-group">
+						    <form><label for="appt-time">営業終了時刻: </label>
+						    <input id="appt-time" type="time" name="appt-time"></form>
+							
 						  </div>
 						  
 						  
