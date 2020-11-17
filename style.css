@@ -4,3 +4,21 @@
   padding-right: 15px;
   padding-left: 15px
 }
+.tit_blue {
+    padding: 0.25em 0.5em;
+    color: #494949;
+    border-left: solid 5px #001c58;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 60px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.pr_flash_con {
+    background-color: #FF9F00;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 2px 8px;
+    font-size: 13px;
+    margin-left: 10px;
+}
