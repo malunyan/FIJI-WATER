@@ -117,11 +117,12 @@
 						    <input type="text" class="form-control size-input-name" id="tel" name="tel" value="">
 						    <p class="help-block">例）03-1234-5678</p>
 						  </div>
-						  <div class="form-group">
-						    <label for="name1" class="b">郵便番号<span class="pr_flash_con">必須</span></label>
-						    <input type="text" class="form-control size-input-name" id="zip" name="zip" value="">
-						    <p class="help-block">例）ハイフンなし</p>
-						  </div>
+						<td>
+           					 <input name="hpost1" id="hpost1" size="3" maxlength="3" type="Text" value="" pattern="[0-9]*" style="ime-mode:disabled;" onkeyup="findZipcode('h');" class="inputS">-
+           					 <input name="hpost2" id="hpost2" size="4" maxlength="4" type="Text" value="" pattern="[0-9]*" style="ime-mode:disabled;" onkeyup="findZipcode('h');" class="inputS">
+            				         <span class="notes">例）000-0000　半角数字 ※半角数字</span>
+           					 <span id="hsearchmessage"></span>
+      						</td>
 						  <div class="form-group">
 						    <label for="mail1" class="b">住所  <span class="pr_flash_con">必須</span></label>
 						    <input type="text" class="form-control" id="addr" name="addr" value="">
