@@ -126,17 +126,7 @@
 						<label for="name1" class="b">郵便番号<span class="pr_flash_con">必須<br></span></label>
 						<input type="text" name="zip31" size="4" maxlength="3"> －
 						<input type="text" name="zip32" size="5" maxlength="4" onKeyUp="AjaxZip3.zip2addr('zip31','zip32','pref31','addr31','addr31');">
-						function nextfeild(str) {
-        						if (str.value.length >= str.maxLength) {
-           						 for (var i = 0, elm = str.form.elements; i < elm.length; i++) {
-               							 if (elm[i] == str) {
-                    							(elm[i + 1] || elm[0]).focus();
-                   							 break;
-               							 }
-           						 }
-       						 }
-      						  return (str);
-   					 }
+						
 				        </div>		
 							  <!-- ▼住所入力フィールド(都道府県) -->
 					<div class="form-group">
@@ -328,6 +318,17 @@
 
 		</div>
 <script type="text/javascript">
+	function nextfeild(str) {
+        						if (str.value.length >= str.maxLength) {
+           						 for (var i = 0, elm = str.form.elements; i < elm.length; i++) {
+               							 if (elm[i] == str) {
+                    							(elm[i + 1] || elm[0]).focus();
+                   							 break;
+               							 }
+           						 }
+       						 }
+      						  return (str);
+   					 }
 $(function(){
 	switchResponsive();
 
