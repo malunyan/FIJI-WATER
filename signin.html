@@ -124,7 +124,7 @@
 				       <!-- ▼郵便番号入力フィールド(3桁+4桁) -->
 					<div class="form-group">
 						<label for="name1" class="b">郵便番号<span class="pr_flash_con">必須<br></span></label>
-						<input type="text" name="zip31" size="4" maxlength="3"> －
+						<input type="text" name="zip31" size="4" maxlength="3" onkeyup="nextfeild(this)"> －
 						<input type="text" name="zip32" size="5" maxlength="4" onKeyUp="AjaxZip3.zip2addr('zip31','zip32','pref31','addr31','addr31');">
 						
 				        </div>		
