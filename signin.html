@@ -419,7 +419,7 @@ function switchResponsive() {
 
 //郵便番号検索
 function findZipcode(type){
-    var zipcode = $('#' + type + 'post1').val() + $('#' + type + 'post2').val();
+    var zipcode = $('#' + type + 'zip31').val() + $('#' + type + 'zip32').val();
     if (zipcode.length != 7 || !zipcode.match(/\d{7}$/)) {
         return;
     }
@@ -427,13 +427,13 @@ function findZipcode(type){
     }
 
 function checkLimitZipcode(callback, type) {
-    var zipcode = $('#' + type + 'post1').val() + $('#' + type + 'post2').val();
+    var zipcode = $('#' + type + 'zip31').val() + $('#' + type + 'zip32').val();
     if (!zipcode.match(/\d{7}$/)) {
         return;
     }
     $.ajax({
         url : "./limit_zip_code_check.html",
-        type : "post",
+        type : "zip",
         data : ({ admin_id: "nipponbeer",
                   check_zip_code: zipcode }),
         success : callback
